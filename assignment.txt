@@ -1,0 +1,52 @@
+Take-Home Programming Assignment
+Parallelization of Deep Learning Models
+1. Assignment Overview
+In this assignment, you will design, implement, and evaluate parallel versions of a deep learning
+training algorithm. The deep learning model may belong to any architecture family, such as fully
+connected networks, convolutional networks, recurrent networks, or attention-based models. The
+goal is to compare a serial baseline implementation with one or more parallel implementations
+executed on a shared-memory system, a distributed-memory system, or a hybrid architecture.
+2. Model Selection and Serial Baseline
+Select a deep learning model suitable for supervised learning and describe its architecture, loss
+function, and optimization method. Implement a serial version of the training process, clearly
+outlining the forward pass, backward pass, gradient computation, and parameter update steps.
+Report baseline performance in terms of training time and learning behavior such as loss
+convergence or accuracy.
+3. Parallelization Strategies
+Design and implement at least one parallel version of the selected deep learning model. You may
+choose from data parallelism, model parallelism, or a hybrid approach. Clearly explain which
+components of the training process are parallelized, how data and model parameters are
+partitioned, and how consistency of model updates is maintained during training. If multiple
+strategies are implemented, discuss the rationale for each.
+4. Target Architecture and Programming Model
+Choose an execution environment for your implementation, which may be a shared-memory
+system, a distributed-memory system, or a hybrid architecture. Justify your choice based on
+scalability, memory access patterns, and communication requirements. Specify the parallel
+programming model used, such as OpenMP, MPI, a hybrid MPI+OpenMP approach, or
+framework-supported parallelism, and explain how it maps to the selected architecture.
+5. Experimental Setup
+Describe the hardware and software environment used for the experiments, including relevant
+system characteristics and libraries. Provide details of the dataset, preprocessing steps, and
+training configuration such as batch size, number of epochs, and learning rate. Ensure that the
+experimental setup allows for a fair comparison between serial and parallel implementations.
+6. Performance Evaluation and Comparison
+Evaluate and compare the serial and parallel implementations in terms of training time, speedup,
+and scalability. Analyze how performance changes with increased workload or parallelism. Verify
+correctness by comparing learning outcomes such as loss curves or final model accuracy across
+implementations.
+7. Performance Challenges and Optimization
+Discuss the main challenges encountered during parallel training, including communication
+overhead, synchronization costs, and load imbalance. Explain how these challenges affect
+performance and describe any techniques used, or that could be used, to mitigate their impact and
+improve scalability.
+
+8. Discussion
+Reflect on the effectiveness of the chosen parallelization strategy for the selected deep learning
+model. Discuss trade-offs between performance, implementation complexity, and scalability, and
+comment on how model characteristics influence parallel behavior.
+9. Deliverables
+• Complete source code for the serial implementation
+• Complete source code for the parallel implementation(s)
+• A technical report of 3–5 pages describing the model, parallelization approach, experimental
+setup, and performance results
+• A README file with clear instructions for compiling, running, and reproducing the experiments
